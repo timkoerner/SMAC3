@@ -114,7 +114,7 @@ class AbstractInitialDesign:
             "name": self.__class__.__name__,
             "n_configs": self._n_configs,
             "n_configs_per_hyperparameter": self._n_configs_per_hyperparameter,
-            "additional_configs": [c.get_dictionary() for c in self._additional_configs],
+            "additional_configs": [dict(c) for c in self._additional_configs],
             "seed": self._seed,
         }
 
